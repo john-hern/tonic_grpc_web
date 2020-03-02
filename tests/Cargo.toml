@@ -1,0 +1,24 @@
+[package]
+name = "tests"
+version = "0.1.0"
+authors = ["John Hernandez <john.hern@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = "*"
+futures = "0.3"
+tower-service = "0.3"
+http="0.2"
+hyper="*"
+log = "*"
+tokio = { version = "0.2", features = ["rt-threaded", "time", "stream", "fs", "macros", "uds"] }
+prost = "0.6"
+# Required for wellknown types
+prost-types = "0.6"
+tower_grpc_proxy = { path = "../tonic_grpc_web"}
+
+
+[build-dependencies]
+tonic-build = "*"
